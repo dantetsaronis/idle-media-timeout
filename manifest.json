@@ -1,0 +1,40 @@
+{
+  "description": "Reloads or unloads pages still playing media after a configurable period without user activity. Especially useful for pausing streaming content that you might otherwise sleep through!",
+  "manifest_version": 2,
+  "name": "Idle Media Timeout",
+  "version": "0.0.1",
+  "icons": {
+    "128": "icons/294398_monitor_business_work_fast_late_icon.svg",
+    "64": "icons/294398_monitor_business_work_fast_late_icon.svg",
+    "48": "icons/294398_monitor_business_work_fast_late_icon.svg",
+    "32": "icons/294398_monitor_business_work_fast_late_icon.svg",
+    "16": "icons/294398_monitor_business_work_fast_late_icon.svg"
+  },
+
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "idle",
+    "alarms",
+    "notifications",
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_title": "Idle Media Timeout",
+    "default_popup": "popup/index.html",
+    "default_icon": "icons/294398_monitor_business_work_fast_late_icon.svg"
+  },
+
+  "options_ui": {
+    "page": "popup/index.html"
+  },
+
+  "web_accessible_resources": [
+  ],
+
+  "background": {
+    "page": "background.html"
+  }
+
+}

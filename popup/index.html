@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="normalize-11.0.0.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <form>
+    <div>
+      <label for="timeout" title="Does not include any notification delay (see below)">Timeout duration in minutes:</label>
+      <input id="timeout" name="timeout" type="number" step="1" min="1" max="4320">
+    </div>
+    <div>
+      <label for="domains" title="Restrict the behavior to this list of comma-separated domains; leave blank for all domains">Domains:</label>
+      <input id="domains" name="domains" type="text">
+    </div>
+    <div>
+      <label for="ignore_pinned">Ignore pinned tabs:</label>
+      <input id="ignore_pinned" name="ignore_pinned" type="checkbox">
+    </div>
+    <div>
+      <label for="action" title="Note that the Alert method only works in the active tab">Action to take:</label>
+      <select id="action" name="action">
+      </select>
+    </div>
+    <!--
+    <div>
+      <label for="notify">Notify before taking action:</label>
+      <input id="notify" name="notify" type="checkbox">
+    </div>
+    <div>
+      <label for="notify_delay" title="Delay between a notification and the action in minutes">Delay after notification:</label>
+      <input id="notify_delay" name="notify_delay" type="number" min="1" placeholder="minutes">
+    </div>
+    -->
+    <div>
+      <button type="submit">Save</button>
+      <button id="reset" name="reset" type="button">Reset to defaults</button>
+      <span id="confirmation">
+        ✔️ Saved
+      </span>
+  </form>
+  <script src="script.mjs" type="module"></script>
+</body>
+
+</html>
